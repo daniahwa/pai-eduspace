@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAI EDUSPACE | Dunia Tayammum</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --navy: #101d38;
+  --blue: #2463a7;
+  --gold: #e7bd70;
+  --sand: #f3e8d3;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #101d38;
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  background: rgba(10,20,40,.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.hero {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 20px;
+  background:
+    radial-gradient(circle at 20% 20%, #315b86, transparent 35%),
+    radial-gradient(circle at 80% 70%, #765c39, transparent 30%),
+    linear-gradient(135deg,#101d38,#1c3558);
+  position: relative;
+}
+
+.hero small {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(45px,8vw,90px);
+  font-weight: 800;
+  margin: 20px 0;
+  background: linear-gradient(90deg,#fff,#e7bd70,#fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {filter: drop-shadow(0 0 5px #e7bd70);}
+  to {filter: drop-shadow(0 0 25px #e7bd70);}
+}
+
+.hero p {
+  max-width: 650px;
+  color: #d9e3f2;
+  line-height: 1.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: var(--gold);
+  color: #17233a;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  margin-top: 25px;
+  transition: .3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px #e7bd7055;
+}
+
+section {
+  padding: 75px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  color: var(--gold);
+  font-size: 32px;
+}
+
+.section-title p {
+  color: #b9c8dc;
+  margin-top: 10px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+}
+
+.card {
+  background: linear-gradient(145deg,#203b60,#142642);
+  border: 1px solid #ffffff20;
+  border-radius: 22px;
+  padding: 28px;
+  transition: .35s;
+  box-shadow: 0 10px 30px #0003;
+}
+
+.card:hover {
+  transform: translateY(-10px) rotateX(3deg);
+  border-color: var(--gold);
+}
+
+.card .icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #c5d3e4;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.sand {
+  background: var(--sand);
+  color: #182b45;
+}
+
+.sand .section-title p {
+  color: #68778b;
+}
+
+.sand .card {
+  background: white;
+  color: #182b45;
+  box-shadow: 0 10px 25px #17233a15;
+}
+
+.sand .card p {
+  color: #64748b;
+}
+
+.sand .card h3 {
+  color: #9a6d2e;
+}
+
+.video-box {
+  max-width: 850px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 15px 40px #0005;
+}
+
+.video-box iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 35px;
+  background: #091326;
+  color: #9eacc0;
+  font-size: 12px;
+}
+
+@media(max-width:650px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  nav a {
+    margin: 0 7px;
+    font-size: 11px;
+  }
+  section {
+    padding: 55px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">✦ PAI EDUSPACE</div>
+  <nav>
+    <a href="#utama">Utama</a>
+    <a href="#ilmu">Kad Ilmu</a>
+    <a href="#video">Video</a>
+    <a href="#aktiviti">Aktiviti</a>
+  </nav>
+</header>
+
+<div class="hero" id="utama">
+  <small>PENDIDIKAN ISLAM • TAHUN 5</small>
+  <h1>JOM KENALI<br>TAYAMMUM</h1>
+  <p>
+    Selamat datang ke PAI EDUSPACE! Terokai dunia pembelajaran
+    tayammum melalui bahan interaktif, video, aktiviti dan permainan
+    yang menyeronokkan.
+  </p>
+  <a href="#ilmu" class="btn">Mula Belajar ✦</a>
+</div>
+
+<section id="ilmu">
+  <div class="section-title">
+    <h2>✦ Pusat Ilmu Tayammum</h2>
+    <p>Kenali asas tayammum melalui empat bahagian utama.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">📖</div>
+      <h3>Maksud Tayammum</h3>
+      <p>Tayammum ialah menyapu debu tanah yang suci ke muka dan kedua-dua tangan dengan niat serta tertib tertentu.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏕️</div>
+      <h3>Sebab Tayammum</h3>
+      <p>Antaranya tiada air, sakit atau keadaan tertentu yang menghalang penggunaan air.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤲</div>
+      <h3>Rukun Tayammum</h3>
+      <p>Niat, menyapu debu tanah ke muka, menyapu kedua-dua tangan hingga siku dan tertib.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🌟</div>
+      <h3>Sunat Tayammum</h3>
+      <p>Membaca basmalah, mendahulukan anggota kanan dan menipiskan debu pada tapak tangan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sand" id="video">
+  <div class="section-title">
+    <h2>🎬 Video Pembelajaran</h2>
+    <p>Tonton video pembelajaran tayammum di bawah.</p>
+  </div>
+
+  <div class="video-box">
+    <!-- GANTIKAN VIDEO_ID DENGAN ID VIDEO YOUTUBE ANDA -->
+    <iframe
+      src="https://www.youtube.com/embed/VIDEO_ID"
+      title="Video Pembelajaran Tayammum"
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section id="aktiviti">
+  <div class="section-title">
+    <h2>🎮 Jom Uji Minda!</h2>
+    <p>Belajar sambil bermain dengan aktiviti interaktif.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="icon">🧩</div>
+      <h3>Kuiz Tayammum</h3>
+      <p>Uji kefahaman tentang maksud, sebab dan rukun tayammum.</p>
+      <a class="btn" href="#" onclick="alert('Masukkan pautan kuiz anda!')">Mula Kuiz</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>Permainan Interaktif</h3>
+      <p>Lengkapkan aktiviti pembelajaran untuk mengukuhkan ingatan.</p>
+      <a class="btn" href="#" onclick="alert('Masukkan pautan permainan anda!')">Main Sekarang</a>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>Bahan Bacaan</h3>
+      <p>Terokai nota dan bahan pembelajaran digital.</p>
+      <a class="btn" href="#" onclick="alert('Masukkan pautan bahan bacaan anda!')">Baca Sekarang</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ✦ PAI EDUSPACE ✦<br><br>
+  Pembelajaran Digital Pendidikan Islam Tahun 5<br>
+  © 2026 PAI EDUSPACE
+</footer>
+
+</body>
+</html>
